@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+.main-bg{
     background-color: #010101;
+}
+.tangerine{
+    font-family: "Tangerine", cursive;
+}
+.roboto{
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .content{
@@ -16,16 +25,18 @@ body{
     color: antiquewhite;
 }
 
-.hero-text{
+/* .hero-text{
     
-}
+} */
 
 .welcome,.aboutme,.skills,.education,.projects{
     min-height: 90vh;
     width: 90%;
-    border: 2px solid white;
     margin: 2em 0;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.projects{
+    border: 2px solid white;
 }

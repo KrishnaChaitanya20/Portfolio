@@ -1,8 +1,8 @@
-import React from 'react'
+import {cn} from "../lib/utils"
 
-const Projects = () => {
+const Projects = ({className}:{className?:String}) => {
   return (
-    <div className='projects'>
+    <div className={cn("projects",className)}>
         Projects
     </div>
   )

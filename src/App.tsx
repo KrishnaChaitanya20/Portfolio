@@ -12,12 +12,13 @@ const App: React.FC = () => {
           {/* <WavyBackground containerClassName="wavy-bg " className=" min-w-full mx-auto pb-20"> */}
           {/* </WavyBackground> */}
         <div className="content">
-              <Welcome/>
+          <Welcome />
           <AboutMe/>
           <Skills/>
           <Education/>
           <Projects/>
         </div>
+
     </>
   );
 };
