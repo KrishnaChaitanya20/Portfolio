@@ -1,4 +1,3 @@
-import {BackgroundGradient} from "../components/background-gradient"
 import IconCloud from "../components/icon-cloud";
 
 const slugs = [
