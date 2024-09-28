@@ -2,17 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+    --background: #101010;
+    --on-background: #f2f2f2;
+}
 .main-bg{
     background-color: #010101;
 }
 .tangerine{
     font-family: "Tangerine", cursive;
 }
+.new-font{
+    font-family: "Merienda", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
 .roboto{
     font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+}
+.gowun-batang {
+    font-family: "Gowun Batang", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+*::-webkit-scrollbar-track {
+    background-color: #010101;
+}
+
+*::-webkit-scrollbar {
+    width: 6px; 
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 10px; 
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+}
+.keyword{
+    color: rgb(153 246 228);
+    font-size: large;
+}
+
+.nav-pill {
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background-color: #f2f2f20d;
+    border: 1px solid #f2f2f21a;
+    border-radius: 24px;
+    justify-content: space-around;
+    align-items: center;
+    width: 180px;
+    height: 48px;
+    padding-left: 6px;
+    padding-right: 6px;
+    transition: box-shadow 1s cubic-bezier(.23, 1, .32, 1), border .6s cubic-bezier(.165, .84, .44, 1);
+    display: flex;
+    position: sticky;
+    box-shadow: 0 10px 25px #00000026;
+  }
+
+.nav-toggle {
+    color: var(--on-background);
+    text-align: center;
+    border-radius: 18px;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 36px;
+    text-decoration: none;
+    transition: all .2s cubic-bezier(.165, .84, .44, 1);
+    display: flex;
+}
+.nav-toggle.work:hover {
+    background-image: linear-gradient(270deg, #0000, #f2f2f20d);
 }
 
 .content{
@@ -25,18 +96,16 @@
     color: antiquewhite;
 }
 
-/* .hero-text{
-    
-} */
+.skill-section{
+    font-weight: 600;
+    color: antiquewhite;
+}
 
-.welcome,.aboutme,.skills,.education,.projects{
+.welcome,.aboutme,.education,.projects{
     min-height: 90vh;
     width: 90%;
     margin: 2em 0;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.projects{
-    border: 2px solid white;
 }
