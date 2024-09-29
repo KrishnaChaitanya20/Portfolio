@@ -1,5 +1,5 @@
-import React from 'react';
-import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { createBrowserRouter,RouterProvider, useLocation } from 'react-router-dom';
 import Welcome from './ui/welcome';
 import AboutMe from './ui/aboutme';
 import Skills from "./ui/skills"
@@ -7,20 +7,23 @@ import Education from "./ui/education"
 import {Projects} from "./ui/projects"
 import Navbar from './ui/navbar';
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 const App: React.FC = () => {
-        <div className="content">
-          <Welcome />
-          <Projects/>
-          <Skills/>
-          <AboutMe/>
-          <Education/>
-        </div>
         const router = createBrowserRouter([
           {
             path: "/",
             element: 
             <div className="content">
+              <ScrollToTop />
               <Navbar/>
               <Welcome />
               <Projects/>
@@ -31,6 +34,7 @@ const App: React.FC = () => {
             path: "/aboutme",
             element: 
             <div className="content">
+              <ScrollToTop />
               <Navbar/>
               <AboutMe/>
               <Education/>
