@@ -2,11 +2,12 @@ import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../hooks/use-outside-click";
 import { BentoGrid, BentoGridItem } from "../components/bento-grid";
+import { Badges } from "../components/badges";
 
 
 // import portfolioCover from "../assests/portfolio-cover.png";
 
-export function Projects() {
+function Projects() {
 
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
     null
@@ -72,7 +73,7 @@ export function Projects() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="bg-[#010101] w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col sm:rounded-3xl overflow-hidden"
+              className="bg-[#010101] w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col sm:rounded-3xl border-slate-400 sm:border-2 overflow-hidden "
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <img
@@ -105,6 +106,7 @@ export function Projects() {
           </div>
         ) : null}
       </AnimatePresence>
+
       <div className="min-w-[90%]">
         <div className="text-4xl pb-20 px-4 sm:px-10 ">
           Projects
@@ -114,7 +116,7 @@ export function Projects() {
           <BentoGridItem
             key={i}
             title= <div className="text-xl text-[#b2a988]">{card.title}</div>
-            // description={item.description}
+            description=<Badges technologies={card.technologies}/>
             header={card.header}
             className={card.className}
             onCLickFun={() => {setActive(card)}}
@@ -165,18 +167,21 @@ const Image = ({ src }: { src?: string }) => (
 const cards = [
   {
     title: "Event Management System",
+    technologies: ["React", "Flask", "MongoDB","Docker","Docker Compose"],
     description: <div>This <span className="keyword">full-stack</span> web application allows users to manage events by creating, updating, and deleting event details, as well as enabling user registration. I used <span className="keyword">React</span> for the frontend, <span className="keyword">Flask</span> for the backend API, and <span className="keyword">MongoDB</span> for data storage. Additionally, I automated the build and deployment process by integrating <span className="keyword">GitHub Actions</span>, which automatically creates and pushes <span className="keyword">Docker images</span> both the frontend and backend upon code updates. I also created a <span className="keyword">Docker Compose</span> file to easily deploy the entire system with a single command, ensuring seamless configuration and deployment.</div>,
     src: "/assets/et-cover.png",
     className: "main-bg md:col-span-1",
   },
   {
     title: "Job Scraper on LinkedIn",
+    technologies: ["Python", "Requests", "BeautifulSoup","Pandas"],
     description: <div>This is a web scraper that extracts job postings from LinkedIn based on user-specified keywords and stores them in a CSV file for easy analysis. The scraper is implemented using <span className="keyword">Python</span> and leverages libraries such as <span className="keyword">BeautifulSoup</span> for parsing HTML content, <span className="keyword">Pandas</span> for handling and organizing the data, and <span className="keyword">Requests</span> for making HTTP requests. This project improved my skills in data extraction, handling unstructured data, and manipulating it into a usable format.</div>,
     src: "/assets/scrapper-cover.png",
     className: "main-bg md:col-span-1",
   },
   {
     title: "Portfolio Website",
+    technologies: ["React", "Aceternity UI", "Magic UI"],
     description: <div>This is my personal portfolio website, developed using <span className="keyword">React</span> and <span className="keyword">TypeScript</span> to showcase my skills and projects. I designed the user interface using <span className="keyword">Aceternity UI</span> and <span className="keyword">Magic UI</span>, which helped streamline the visual aesthetics and provided a modern, responsive design. This website serves as both a personal brand platform and a demonstration of my web development capabilities.</div>,
     src: "/assets/portfolio-cover.png",
     className: "main-bg md:col-span-1",
@@ -185,3 +190,6 @@ const cards = [
   ...card,
   header: <Image src={card.src} />
 }));
+
+
+export default Projects;

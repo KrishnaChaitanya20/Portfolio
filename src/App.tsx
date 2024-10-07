@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react';
-import { createBrowserRouter,RouterProvider, useLocation } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, useLocation } from 'react-router-dom';
 import Welcome from './ui/welcome';
 import AboutMe from './ui/aboutme';
-import Skills from "./ui/skills"
-import Education from "./ui/education"
-import {Projects} from "./ui/projects"
+import Skills from "./ui/skills";
+import Education from "./ui/education";
+import Projects from "./ui/projects";
 import Navbar from './ui/navbar';
+import Resume from './ui/resume';
+import Footer from './ui/footer';
+import ScrollHint from './components/scroll-Hint.tsx';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -18,35 +21,49 @@ const ScrollToTop = () => {
 };
 
 const App: React.FC = () => {
-        const router = createBrowserRouter([
-          {
-            path: "/",
-            element: 
-            <div className="content">
-              <ScrollToTop />
-              <Navbar/>
-              <Welcome />
-              <Projects/>
-              <Skills/>
-            </div>,
-          },
-          {
-            path: "/aboutme",
-            element: 
-            <div className="content">
-              <ScrollToTop />
-              <Navbar/>
-              <AboutMe/>
-              <Education/>
-            </div>,
-          }
-        ])
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <>
+          <ScrollToTop />
+          <ScrollHint />
+          <div className="content">
+            <Navbar />
+            <Welcome />
+            <Projects />
+            <Skills />
+            <Footer />
+          </div>
+        </>
+      ),
+    },
+    {
+      path: "/aboutme",
+      element: (
+        <>
+          <ScrollToTop />
+          <div className="content">
+            <Navbar />
+            <AboutMe />
+            <Education />
+            <Footer />
+          </div>
+        </>
+      ),
+    },
+    {
+      path: "/resume",
+      element: <Resume/>,
+    },
+    {
+      path: "*",
+      element: <div className='text-white'>404 - Page Not Found</div>,
+    },
+  ]);
+
   return (
-    <>
-          {/* <WavyBackground containerClassName="wavy-bg " className=" min-w-full mx-auto pb-20"> */}
-          {/* </WavyBackground> */}
-          <RouterProvider router={router}/>
-    </>
+    <RouterProvider router={router} />
   );
 };
 

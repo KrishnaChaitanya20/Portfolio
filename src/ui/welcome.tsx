@@ -12,13 +12,15 @@ export function Welcome() {
           particleColor="#475569"
         />
       </div>
-          <p className="text-base md:text-2xl lg:text-2xl text-white new-font">
-            Heyy there!!!! <br/> Welcome to my space in this Web, I am&nbsp;
-          </p>
-          {/* <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center"> */}
-            
-            <p className="tangerine text-6xl md:text-8xl mt-5 ">Krishna Chaitanya</p>
-          {/* </p> */}
+      <div className="text">
+        <p className="text-base md:text-2xl lg:text-2xl text-white new-font">
+          Heyy there!!!! <br/> Welcome to my space in this Web, I am&nbsp;
+        </p>
+        <p className="tangerine text-6xl md:text-8xl mt-6 ">Krishna Chaitanya</p>
+        <p className="text-base md:text-2xl lg:text-2xl text-white new-font">
+          Aspiring <span className="text-teal-500">Software/Cloud Engineer</span>&nbsp;
+        </p>
+      </div>
       
     </div>
   );

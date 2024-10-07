@@ -51,6 +51,10 @@
     color: rgb(153 246 228);
     font-size: large;
 }
+.badge{
+  background-color: rgba(82,82,91,.4);
+  color: rgb(13 148 136);
+}
 
 .nav-pill {
     -webkit-backdrop-filter: blur(15px);
@@ -58,7 +62,7 @@
     background-color: #f2f2f20d;
     border: 1px solid #f2f2f21a;
     border-radius: 24px;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 180px;
     height: 48px;
@@ -88,6 +92,7 @@
 
 .content{
     z-index: 10;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,3 +114,31 @@
     justify-content: center;
     align-items: center;
 }
+
+
+.hint {
+  animation: bounce 2s infinite;
+  transition: opacity .5s ease;
+  opacity: 1;
+  background: transparent;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.hint.fade-out {
+  opacity: 0;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
