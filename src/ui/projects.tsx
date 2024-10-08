@@ -63,7 +63,7 @@ function Projects() {
                   duration: 0.05,
                 },
               }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
+              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6 z-[100]"
               onClick={() => setActive(null)}
             >
               <CloseIcon />
@@ -73,15 +73,15 @@ function Projects() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="bg-[#010101] w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col sm:rounded-3xl border-slate-400 sm:border-2 overflow-hidden "
+              className="bg-[#010101] relative w-full max-w-[500px]  h-full md:max-h-[90%]  flex flex-col sm:rounded-3xl border-slate-400 sm:border-2 overflow-hidden "
             >
-              <motion.div layoutId={`image-${active.title}-${id}`}>
+              <motion.div className="relative z-[90]" layoutId={`image-${active.title}-${id}`}>
                 <img
                   width={200}
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-[30vh] lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-fit object-center"
+                  className="w-full h-[30vh]  lg:h-80  sm:rounded-tr-lg sm:rounded-tl-lg object-fit object-center"
                 />
               </motion.div> 
               <div>

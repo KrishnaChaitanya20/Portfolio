@@ -47,6 +47,8 @@
 *::-webkit-scrollbar-thumb:hover {
     background-color: #555; 
 }
+
+
 .keyword{
     color: rgb(153 246 228);
     font-size: large;
@@ -54,6 +56,10 @@
 .badge{
   background-color: rgba(82,82,91,.4);
   color: rgb(13 148 136);
+}
+
+.logo-img{
+  height: 3em;
 }
 
 .nav-pill {
@@ -86,12 +92,13 @@
     transition: all .2s cubic-bezier(.165, .84, .44, 1);
     display: flex;
 }
-.nav-toggle.work:hover {
+.nav-toggle:hover {
     background-image: linear-gradient(270deg, #0000, #f2f2f20d);
 }
 
 .content{
-    z-index: 10;
+    /* z-index: 10; */
+    padding-top: 3em;
     position: relative;
     display: flex;
     flex-direction: column;

@@ -28,13 +28,13 @@ const App: React.FC = () => {
         <>
           <ScrollToTop />
           <ScrollHint />
+          <Navbar />
           <div className="content">
-            <Navbar />
             <Welcome />
             <Projects />
             <Skills />
-            <Footer />
           </div>
+          <Footer />
         </>
       ),
     },
@@ -43,12 +43,12 @@ const App: React.FC = () => {
       element: (
         <>
           <ScrollToTop />
+          <Navbar />
           <div className="content">
-            <Navbar />
             <AboutMe />
             <Education />
-            <Footer />
           </div>
+          <Footer />
         </>
       ),
     },
