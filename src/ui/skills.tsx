@@ -41,10 +41,10 @@ const Skills = () => {
           <div className="icon relative flex h-full max-w-[90%] sm:w-full mx-auto items-center justify-center overflow-hidden rounded-lg ">
             <IconCloud iconSlugs={slugs} />
           </div>
-          <p className="text-base text-white sm:text-2xl h-full max-w-[90%] m-auto sm:w-full  content-center roboto ">
-            <span className="skill-section">Programming languages: </span> Python, Java, C, JavaScript <br/>
+          <p className="text-base text-white sm:text-xl h-full max-w-[90%] m-auto sm:w-full  content-center roboto ">
+            <span className="skill-section">Programming languages: </span>Java, Python, C, JavaScript <br/>
             <span className="skill-section">Cloud: </span>  AWS<br/>
-            <span className="skill-section">DevOps: </span> Jenkins, Docker, Kubernetes, Ansible, Terraform <br/>
+            <span className="skill-section">DevOps: </span> Docker, Ansible, Terraform, Kubernetes, Jenkins <br/>
             <span className="skill-section">Version control: </span> Git, GitHub<br/>
             <span className="skill-section">Databases: </span> MySQL, MongoDB <br/>
             <span className="skill-section">Operating systems: </span> Linux, Windows <br/>

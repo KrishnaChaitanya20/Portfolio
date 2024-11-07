@@ -5,8 +5,6 @@ import { BentoGrid, BentoGridItem } from "../components/bento-grid";
 import { Badges } from "../components/badges";
 
 
-// import portfolioCover from "../assests/portfolio-cover.png";
-
 function Projects() {
 
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -81,7 +79,7 @@ function Projects() {
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-[30vh]  lg:h-80  sm:rounded-tr-lg sm:rounded-tl-lg object-fit object-center"
+                  className="w-full h-[30vh]  lg:h-72  sm:rounded-tr-lg sm:rounded-tl-lg object-fit object-center"
                 />
               </motion.div> 
               <div>
@@ -95,7 +93,7 @@ function Projects() {
                     </motion.h3>
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
-                      className="description text-[#f8fafc] sm:max-h-40 overflow-y-scroll "
+                      className="description text-[#f8fafc] h-[50vh] sm:max-h-40 overflow-y-scroll "
                     >
                       {active.description}
                     </motion.p>
@@ -180,10 +178,10 @@ const cards = [
     className: "main-bg md:col-span-1",
   },
   {
-    title: "Portfolio Website",
-    technologies: ["React", "Aceternity UI", "Magic UI"],
-    description: <div>This is my personal portfolio website, developed using <span className="keyword">React</span> and <span className="keyword">TypeScript</span> to showcase my skills and projects. I designed the user interface using <span className="keyword">Aceternity UI</span> and <span className="keyword">Magic UI</span>, which helped streamline the visual aesthetics and provided a modern, responsive design. This website serves as both a personal brand platform and a demonstration of my web development capabilities.</div>,
-    src: "/assets/portfolio-cover.png",
+    title: "DonorConnect",
+    technologies: ["React", "Flask", "MySQL"],
+    description: <div>The <span className="keyword">DonorConenct</span> is a web-based application designed to connect companies that want to donate hardware with schools in need of technological resources. Companies can list items such as computers, laptops, and other tech equipment for donation, while schools can easily browse and request the hardware that best fits their needs. The platform, built using <span className="keyword">Flask</span> for the backend, <span className="keyword">React</span> for the frontend, and <span className="keyword">MySQL</span> for the database, provides an intuitive interface for both schools and companies. Schools can track the status of their requests, and companies can manage and monitor their donations efficiently. Admins have full control over user management and can oversee donation requests, ensuring a seamless process. The platform offers a streamlined, transparent way for both donors and recipients to contribute to bridging the digital divide in education.</div>,
+    src: "/assets/donorconnect-cover.jpg",
     className: "main-bg md:col-span-1",
   },
 ].map(card => ({
