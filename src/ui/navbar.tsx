@@ -33,7 +33,7 @@ const Navbar = () => {
                 <img src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/63e0b50ea0956f4526968ef1_23-icon-external.svg" loading="lazy" alt="" className="icon-external"></img>
               </span>
               <span className="flex items-center space-x-1">
-                <a href="https://drive.google.com/file/d/1zrhM3ZQgnIf-WvyMqplkXjIp2oliuNAk/view?usp=sharing" target="_blank">Resume</a>
+                <a href="https://drive.google.com/file/d/1U7s2alma0BtYw63cDBAVmetnRsyOH2K1/view?usp=drive_link" target="_blank">Resume</a>
                 <img src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/63e0b50ea0956f4526968ef1_23-icon-external.svg" loading="lazy" alt="" className="icon-external"></img>
               </span>
             </div>
@@ -47,7 +47,7 @@ const Navbar = () => {
           </span>
 
           <span className="flex items-center space-x-1">
-          <a href="https://drive.google.com/file/d/1zrhM3ZQgnIf-WvyMqplkXjIp2oliuNAk/view?usp=sharing" target="_blank">Resume</a>
+          <a href="https://drive.google.com/file/d/1U7s2alma0BtYw63cDBAVmetnRsyOH2K1/view?usp=drive_link" target="_blank">Resume</a>
             <img src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/63e0b50ea0956f4526968ef1_23-icon-external.svg" loading="lazy" alt="" className="icon-external"/>
           </span>
         </div>
