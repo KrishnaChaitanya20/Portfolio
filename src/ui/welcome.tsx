@@ -18,7 +18,7 @@ export function Welcome() {
         </p>
         <p className="tangerine text-6xl md:text-8xl mt-6 ">Krishna Chaitanya</p>
         <p className="text-base md:text-2xl lg:text-2xl text-white new-font">
-          Aspiring <span className="text-teal-500">Software/Cloud Engineer</span>&nbsp;
+          <span className="text-teal-500">FullStack & Cloud Engineer</span>&nbsp;
         </p>
       </div>
       
