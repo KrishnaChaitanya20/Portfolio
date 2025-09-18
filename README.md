@@ -1,50 +1,30 @@
-# React + TypeScript + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website, crafted with **React** and **TypeScript**. This site serves as a showcase of my projects, skills, and professional journey, all presented in a clean and responsive design.
 
-Currently, two official plugins are available:
+## About This Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Designed and developed as a digital portfolio to highlight my work and experience.
+- Features a modern, mobile-friendly interface for seamless browsing on any device.
+- Includes detailed project descriptions, technology stacks.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- **React** for building interactive UIs
+- **TypeScript** for type safety and maintainability
+- **Tailwind CSS** for utility-first, responsive styling
+- **Magic UI** for advanced UI components and effects
+- **Aceternity UI** for modern, customizable UI elements
+- **React Router** for navigation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Personalization
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+All content, including project details and personal information, is tailored to my background and achievements. The design and layout reflect my approach to web development and user experience.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Thank you for visiting my portfolio!
+
+---
+
+[Visit my portfolio website &rarr;](https://dkcdev.me)
