@@ -79,7 +79,7 @@ function Projects() {
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-[30vh]  lg:h-72  sm:rounded-tr-lg sm:rounded-tl-lg object-fit object-center"
+                  className="w-full h-[30vh] lg:h-72 sm:rounded-tr-lg sm:rounded-tl-lg object-fit object-center"
                 />
               </motion.div> 
               <div>
@@ -162,12 +162,35 @@ export const CloseIcon = () => {
 const Image = ({ src }: { src?: string }) => (
   <img src={src} className="object-fit object-center flex flex-1 w-full h-full min-h-[6rem] rounded-xl border border-transparent border-white/[0.2]" />
 );
+
+
 const cards = [
   {
     title: "Event Management System",
     technologies: ["React", "Flask", "MongoDB","Docker","Docker Compose"],
     description: <div>This <span className="keyword">full-stack</span> web application allows users to manage events by creating, updating, and deleting event details, as well as enabling user registration. I used <span className="keyword">React</span> for the frontend, <span className="keyword">Flask</span> for the backend API, and <span className="keyword">MongoDB</span> for data storage. Additionally, I automated the build and deployment process by integrating <span className="keyword">GitHub Actions</span>, which automatically creates and pushes <span className="keyword">Docker images</span> both the frontend and backend upon code updates. I also created a <span className="keyword">Docker Compose</span> file to easily deploy the entire system with a single command, ensuring seamless configuration and deployment.</div>,
     src: "/assets/et-cover.png",
+    className: "main-bg md:col-span-1",
+  },
+  {
+    title: "Docker Homelab",
+    technologies: ["Docker", "Cloudflare", "Traefik", "Pi-hole", "Portainer"],
+    description: (
+      <div>
+        This <span className="keyword">self-hosted homelab</span> leverages Docker and Docker Compose to deploy and manage a variety of services on an Ubuntu server. Key components include:
+        <ul>
+          <li><span className="keyword">Cloudflare Tunnel</span> for secure remote access to internal services.</li>
+          <li><span className="keyword">Traefik</span> as a reverse proxy to manage routing and SSL termination.</li>
+          <li><span className="keyword">Portainer</span> for container management and monitoring.</li>
+          <li><span className="keyword">Pi-hole</span> for network-wide ad blocking.</li>
+          <li><span className="keyword">Jellyfin</span> for media streaming.</li>
+          <li><span className="keyword">Kestra</span> for orchestrating data workflows.</li>
+          <li><span className="keyword">IT Tools</span> for various system utilities and monitoring.</li>
+        </ul>
+        The setup is modular, allowing independent deployment and management of each service. The use of Docker Compose simplifies orchestration, while Cloudflare Tunnel ensures secure external access without exposing the server directly to the internet.
+      </div>
+    ),
+    src: "/assets/docker-homelab.png",
     className: "main-bg md:col-span-1",
   },
   {
