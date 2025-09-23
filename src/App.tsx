@@ -4,7 +4,7 @@ import Welcome from './ui/welcome';
 import AboutMe from './ui/aboutme';
 import Skills from "./ui/skills";
 import Education from "./ui/education";
-import Projects from "./ui/projects";
+// import Projects from "./ui/projects";
 import Navbar from './ui/navbar';
 import Resume from './ui/resume';
 import Footer from './ui/footer';
