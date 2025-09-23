@@ -7,7 +7,7 @@ function Education() {
       title:"Engineering",
       content:(<div>
         <p className="text-2xl">Kakatiya Institue of Technology and Science</p>
-        <p>CGPA: <span className="font-bold">8.5</span></p>
+        <p>CGPA: <span className="font-bold">8.58</span></p>
       </div>)
     },
     {

@@ -6,6 +6,11 @@
 :root {
     --background: #101010;
     --on-background: #f2f2f2;
+    --text-color: #f2f2f2;
+    --primary: #0d9488;
+    --on-primary: #f2f2f2;
+    --secondary: #9333ea;
+    --on-secondary: #f2f2f2;
 }
 .main-bg{
     background-color: #010101;
@@ -30,6 +35,11 @@
     font-weight: 400;
     font-style: normal;
   }
+.geist-mono{
+    font-family: "Geist Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
 
 *::-webkit-scrollbar-track {
     background-color: #010101;
@@ -51,7 +61,7 @@
 
 .keyword{
     color: rgb(153 246 228);
-    font-size: large;
+    /* font-size: large; */
 }
 .badge{
   background-color: rgba(82,82,91,.4);
@@ -120,6 +130,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+.aboutme-content{
+  color: var(--primary);
 }
 
 

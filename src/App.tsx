@@ -9,6 +9,7 @@ import Navbar from './ui/navbar';
 import Resume from './ui/resume';
 import Footer from './ui/footer';
 import ScrollHint from './components/scroll-Hint.tsx';
+import { P2 } from './ui/p2.tsx';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -31,27 +32,30 @@ const App: React.FC = () => {
           <Navbar />
           <div className="content">
             <Welcome />
-            <Projects />
-            <Skills />
-          </div>
-          <Footer />
-        </>
-      ),
-    },
-    {
-      path: "/aboutme",
-      element: (
-        <>
-          <ScrollToTop />
-          <Navbar />
-          <div className="content">
             <AboutMe />
+            <Skills />
+            <P2/>
+            {/* <Projects /> */}
             <Education />
           </div>
           <Footer />
         </>
       ),
     },
+    // {
+    //   path: "/aboutme",
+    //   element: (
+    //     <>
+    //       <ScrollToTop />
+    //       <Navbar />
+    //       <div className="content">
+    //         <AboutMe />
+    //         <Education />
+    //       </div>
+    //       <Footer />
+    //     </>
+    //   ),
+    // },
     {
       path: "/resume",
       element: <Resume/>,
