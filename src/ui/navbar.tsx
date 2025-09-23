@@ -15,11 +15,11 @@ const Navbar = () => {
           <img className="logo-img" src={`assets/logo.svg`} alt="Logo" />
         </div>
 
-        {/* Navigation Links for Medium and Up */}
+        {/* Navigation Links for Medium and Up
         <div className="hidden flex nav-pill mx-auto space-x-4">
           <Link className="nav-toggle" to="/">Home</Link>
           <Link className="nav-toggle" to="/aboutme">About Me</Link>
-        </div>
+        </div> */}
 
       <div className="sm:hidden flex items-center cursor-pointer py-2 px-3 rounded-full bg-[#f2f2f20d] border-[#f2f2f21a] border" onClick={toggleLinks}>
           @
